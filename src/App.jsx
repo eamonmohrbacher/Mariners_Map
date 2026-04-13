@@ -5,6 +5,7 @@ import CategoryFilter from './components/CategoryFilter'
 import ZoneLegend from './components/ZoneLegend'
 import ParkMap from './components/ParkMap'
 import ZonePopup from './components/ZonePopup'
+import ZoneTooltip from './components/ZoneTooltip'
 import './styles/app.css'
 
 const LEVELS = [
@@ -18,8 +19,10 @@ const LEVELS = [
 
 export default function App() {
   const [selectedZone, setSelectedZone] = useState(null)
-  const [popupPos, setPopupPos] = useState(null)
-  const [activeLevel, setActiveLevel] = useState('all')
+  const [popupPos, setPopupPos]         = useState(null)
+  const [hoveredZone, setHoveredZone]   = useState(null)
+  const [hoverPos, setHoverPos]         = useState(null)
+  const [activeLevel, setActiveLevel]   = useState('all')
   const [activeCategory, setActiveCategory] = useState('all')
 
   useEffect(() => {
@@ -31,12 +34,23 @@ export default function App() {
   }, [])
 
   function handleZoneClick(zone, e) {
+    setHoveredZone(null)
     if (selectedZone?.id === zone.id) {
       setSelectedZone(null)
       return
     }
     setSelectedZone(zone)
     setPopupPos({ x: e.clientX, y: e.clientY })
+  }
+
+  function handleZoneHover(zone, e) {
+    if (selectedZone?.id === zone.id) return  // popup already open
+    setHoveredZone(zone)
+    setHoverPos({ x: e.clientX, y: e.clientY })
+  }
+
+  function handleZoneHoverEnd() {
+    setHoveredZone(null)
   }
 
   return (
@@ -67,10 +81,14 @@ export default function App() {
             activeCategory={activeCategory}
             selectedZone={selectedZone}
             onZoneClick={handleZoneClick}
+            onZoneHover={handleZoneHover}
+            onZoneHoverEnd={handleZoneHoverEnd}
           />
           <ZoneLegend />
         </div>
       </main>
+
+      <ZoneTooltip zone={hoveredZone} pos={hoverPos} />
 
       <ZonePopup
         zone={selectedZone}
