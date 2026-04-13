@@ -13,7 +13,7 @@ function getZoneIndex(zone, allZones) {
   return sorted.findIndex(z => z.id === zone.id)
 }
 
-export default function ParkMap({ zones, activeLevel, selectedZone, onZoneClick }) {
+export default function ParkMap({ zones, activeLevel, activeCategory, selectedZone, onZoneClick }) {
   return (
     <div className="park-map-wrap">
       <svg
@@ -106,7 +106,8 @@ export default function ParkMap({ zones, activeLevel, selectedZone, onZoneClick 
 
         {/* ── Zone pins ── */}
         {zones.map((zone) => {
-          const dimmed = activeLevel !== 'all' && zone.level !== activeLevel
+          const dimmed = (activeLevel !== 'all' && zone.level !== activeLevel) ||
+                        (activeCategory !== 'all' && !zone.categories.includes(activeCategory))
           const selected = selectedZone?.id === zone.id
           const index = getZoneIndex(zone, zones)
           return (

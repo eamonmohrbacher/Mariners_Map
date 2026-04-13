@@ -22,7 +22,7 @@ export default function ZonePin({ zone, index, dimmed, selected, onClick }) {
     <g
       className={classNames}
       transform={`translate(${coordinates.x}, ${coordinates.y})`}
-      onClick={() => !dimmed && onClick(zone)}
+      onClick={(e) => !dimmed && onClick(zone, e)}
       role="button"
       aria-label={zone.name}
     >

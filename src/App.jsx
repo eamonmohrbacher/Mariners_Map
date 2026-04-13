@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react'
 import zones from './data/zones.json'
 import LevelFilter from './components/LevelFilter'
+import CategoryFilter from './components/CategoryFilter'
 import ZoneLegend from './components/ZoneLegend'
 import ParkMap from './components/ParkMap'
-import ZonePanel from './components/ZonePanel'
+import ZonePopup from './components/ZonePopup'
 import './styles/app.css'
 
 const LEVELS = [
@@ -17,7 +18,9 @@ const LEVELS = [
 
 export default function App() {
   const [selectedZone, setSelectedZone] = useState(null)
+  const [popupPos, setPopupPos] = useState(null)
   const [activeLevel, setActiveLevel] = useState('all')
+  const [activeCategory, setActiveCategory] = useState('all')
 
   useEffect(() => {
     function handleKey(e) {
@@ -27,9 +30,14 @@ export default function App() {
     return () => window.removeEventListener('keydown', handleKey)
   }, [])
 
-  const visibleZones = activeLevel === 'all'
-    ? zones
-    : zones.filter(z => z.level === activeLevel)
+  function handleZoneClick(zone, e) {
+    if (selectedZone?.id === zone.id) {
+      setSelectedZone(null)
+      return
+    }
+    setSelectedZone(zone)
+    setPopupPos({ x: e.clientX, y: e.clientY })
+  }
 
   return (
     <div className="app">
@@ -42,27 +50,33 @@ export default function App() {
       </header>
 
       <main className="app-main">
+        <CategoryFilter
+          activeCategory={activeCategory}
+          onCategoryChange={(cat) => { setActiveCategory(cat); setSelectedZone(null) }}
+        />
+
         <div className="map-container">
           <LevelFilter
             levels={LEVELS}
             activeLevel={activeLevel}
-            onLevelChange={setActiveLevel}
+            onLevelChange={(lvl) => { setActiveLevel(lvl); setSelectedZone(null) }}
           />
           <ParkMap
             zones={zones}
             activeLevel={activeLevel}
+            activeCategory={activeCategory}
             selectedZone={selectedZone}
-            onZoneClick={setSelectedZone}
+            onZoneClick={handleZoneClick}
           />
           <ZoneLegend />
         </div>
       </main>
 
-      <div
-        className={`panel-overlay ${selectedZone ? 'visible' : ''}`}
-        onClick={() => setSelectedZone(null)}
+      <ZonePopup
+        zone={selectedZone}
+        pos={popupPos}
+        onClose={() => setSelectedZone(null)}
       />
-      <ZonePanel zone={selectedZone} onClose={() => setSelectedZone(null)} />
     </div>
   )
 }
