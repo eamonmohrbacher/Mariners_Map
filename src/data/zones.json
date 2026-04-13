@@ -1,0 +1,300 @@
+[
+  {
+    "id": "griffey",
+    "name": "Ken Griffey Jr. Statue",
+    "location": "Outside home plate entrance",
+    "level": "exterior",
+    "categories": ["history"],
+    "coordinates": { "x": 40, "y": 95 },
+    "summary": "Bronze statue by Lou Cella (2017). Part of statue row with Edgar Martinez (2021) and Ichiro Suzuki (April 2026).",
+    "research": "STUDENT RESEARCH GOES HERE",
+    "keyMetrics": [
+      { "label": "Unveiled", "value": "April 2017" },
+      { "label": "Sculptor", "value": "Lou Cella" },
+      { "label": "Adjacent", "value": "Edgar, Ichiro statues" }
+    ]
+  },
+  {
+    "id": "tempest",
+    "name": "\"The Tempest\" Chandelier",
+    "location": "Home plate entry",
+    "level": "exterior",
+    "categories": ["history"],
+    "coordinates": { "x": 50, "y": 96 },
+    "summary": "Chandelier of 1,000 resin baseball bats above the home plate entry. Part of extensive public art program.",
+    "research": "STUDENT RESEARCH GOES HERE",
+    "keyMetrics": [
+      { "label": "Material", "value": "1,000 resin bats" },
+      { "label": "Type", "value": "Public art installation" }
+    ]
+  },
+  {
+    "id": "ichiro",
+    "name": "Ichiro Suzuki Statue",
+    "location": "Outside, south side near Griffey",
+    "level": "exterior",
+    "categories": ["history"],
+    "coordinates": { "x": 60, "y": 95 },
+    "summary": "Newest statue, unveiled April 10, 2026 alongside Ichiro's #51 retirement ceremony.",
+    "research": "STUDENT RESEARCH GOES HERE",
+    "keyMetrics": [
+      { "label": "Unveiled", "value": "April 10, 2026" },
+      { "label": "Number retired", "value": "#51" },
+      { "label": "Sculptor", "value": "Lou Cella" }
+    ]
+  },
+  {
+    "id": "pen",
+    "name": "The T-Mobile 'Pen",
+    "location": "Center field, between bullpens",
+    "level": "main",
+    "categories": ["social", "food"],
+    "coordinates": { "x": 50, "y": 18 },
+    "summary": "Standing-room social zone with fire pits, bars, and celebrity chef food (Ethan Stowell). Adjacent to both bullpens. Happy hour starts at gate opening.",
+    "research": "STUDENT RESEARCH GOES HERE: Atmosphere analysis, demographic observations, spending patterns, engagement metrics.",
+    "keyMetrics": [
+      { "label": "Capacity", "value": "~3,000 fans" },
+      { "label": "Opens", "value": "2.5 hrs before first pitch" },
+      { "label": "Signature item", "value": "Chapulines (grasshoppers)" }
+    ]
+  },
+  {
+    "id": "kids",
+    "name": "Kids Play Area & Moose's Den",
+    "location": "Center field concourse, below bleachers",
+    "level": "main",
+    "categories": ["family"],
+    "coordinates": { "x": 50, "y": 30 },
+    "summary": "Play zone, Moose mascot meet-and-greet, Kids Clubhouse retail. Free Kids Club membership includes game ticket.",
+    "research": "STUDENT RESEARCH GOES HERE: Family engagement strategy analysis.",
+    "keyMetrics": [
+      { "label": "Ages", "value": "14 and under" },
+      { "label": "Membership", "value": "Free" },
+      { "label": "Perks", "value": "Tee, ticket, 10% off" }
+    ]
+  },
+  {
+    "id": "bleachers",
+    "name": "Left Field Bleachers",
+    "location": "Sections 180–195",
+    "level": "main",
+    "categories": ["social"],
+    "coordinates": { "x": 22, "y": 35 },
+    "summary": "Most affordable seating. Metal benches, die-hard fan territory. Catwalk shortcut above avoids main concourse congestion.",
+    "research": "STUDENT RESEARCH GOES HERE",
+    "keyMetrics": [
+      { "label": "Price", "value": "From $10" },
+      { "label": "Seating", "value": "Metal bench" },
+      { "label": "Vibe", "value": "High energy, vocal" }
+    ]
+  },
+  {
+    "id": "walkoff",
+    "name": "Walk-Off Market",
+    "location": "Multiple concourse locations",
+    "level": "main",
+    "categories": ["innovation", "food"],
+    "coordinates": { "x": 10, "y": 58 },
+    "summary": "MLB's first cashierless store (May 2022), Amazon Just Walk Out technology. Expanded to four locations.",
+    "research": "STUDENT RESEARCH GOES HERE: Fan adoption, transaction speed, revenue impact.",
+    "keyMetrics": [
+      { "label": "Launched", "value": "May 2022" },
+      { "label": "Locations", "value": "4" },
+      { "label": "Tech", "value": "Amazon Just Walk Out" }
+    ]
+  },
+  {
+    "id": "hof",
+    "name": "Mariners Hall of Fame",
+    "location": "Main concourse, Sec. 135–141",
+    "level": "main",
+    "categories": ["history", "family"],
+    "coordinates": { "x": 30, "y": 75 },
+    "summary": "Co-located with Baseball Museum of the Pacific Northwest. 11 inductees. Interactive exhibits covering PNW baseball from the 1800s.",
+    "research": "STUDENT RESEARCH GOES HERE",
+    "keyMetrics": [
+      { "label": "Inductees", "value": "11" },
+      { "label": "Scope", "value": "1800s to present" },
+      { "label": "Hours", "value": "All home games" }
+    ]
+  },
+  {
+    "id": "diamond",
+    "name": "Diamond Club",
+    "location": "Directly behind home plate",
+    "level": "main",
+    "categories": ["premium"],
+    "coordinates": { "x": 50, "y": 80 },
+    "summary": "Most exclusive seating. All-inclusive food/beverages, private entrance, in-seat wait service, climate-controlled lounge.",
+    "research": "STUDENT RESEARCH GOES HERE: Premium tier analysis, pricing strategy, customer profiles.",
+    "keyMetrics": [
+      { "label": "Tier", "value": "Highest premium" },
+      { "label": "Includes", "value": "Food, drink, parking" },
+      { "label": "Service", "value": "In-seat wait staff" }
+    ]
+  },
+  {
+    "id": "edgars_main",
+    "name": "Edgar's Cantina (Main Level)",
+    "location": "Left field, The 'Pen area",
+    "level": "main",
+    "categories": ["food", "social"],
+    "coordinates": { "x": 16, "y": 48 },
+    "summary": "Main-level cantina named for Edgar Martinez. 21+ area with left-field views. Known for white queso nachos.",
+    "research": "STUDENT RESEARCH GOES HERE",
+    "keyMetrics": [
+      { "label": "Restriction", "value": "21+" },
+      { "label": "Signature", "value": "White queso nachos" },
+      { "label": "Vibe", "value": "Local bar feel" }
+    ]
+  },
+  {
+    "id": "hitit",
+    "name": "Hit It Here Cafe & Bar",
+    "location": "Right field, above Sec. 106–107",
+    "level": "main",
+    "categories": ["food", "premium"],
+    "coordinates": { "x": 82, "y": 48 },
+    "summary": "Full sit-down restaurant open to all ticket holders. Opens 90 min before game. Includes private event terrace (170+ guests).",
+    "research": "STUDENT RESEARCH GOES HERE",
+    "keyMetrics": [
+      { "label": "Opens", "value": "90 min before game" },
+      { "label": "Terrace capacity", "value": "170+ guests" },
+      { "label": "Type", "value": "Sit-down restaurant" }
+    ]
+  },
+  {
+    "id": "value_menu",
+    "name": "Value Menu Stands",
+    "location": "Sec. 105, 109, 118, 126, 141+",
+    "level": "main",
+    "categories": ["food"],
+    "coordinates": { "x": 68, "y": 78 },
+    "summary": "Budget-friendly concession stands across the main concourse. All items under $5 including hot dogs, nachos, popcorn, peanuts.",
+    "research": "STUDENT RESEARCH GOES HERE: Pricing strategy, traffic patterns, fan satisfaction.",
+    "keyMetrics": [
+      { "label": "Price point", "value": "Under $5" },
+      { "label": "Locations", "value": "11+" },
+      { "label": "Items", "value": "Dogs, nachos, popcorn" }
+    ]
+  },
+  {
+    "id": "terrace",
+    "name": "Terrace Club & Loge Boxes",
+    "location": "2nd level, 1st base side",
+    "level": "club",
+    "categories": ["premium"],
+    "coordinates": { "x": 72, "y": 68 },
+    "summary": "Mid-tier premium with private lounge, for-purchase food/bev, in-seat wait service. Loge boxes include $100 F&B credit.",
+    "research": "STUDENT RESEARCH GOES HERE",
+    "keyMetrics": [
+      { "label": "Tier", "value": "Mid-premium" },
+      { "label": "Loge credit", "value": "$100 F&B" },
+      { "label": "Service", "value": "In-seat wait staff" }
+    ]
+  },
+  {
+    "id": "edgars_club",
+    "name": "Edgar's Cantina (200 Level)",
+    "location": "Section 216",
+    "level": "club",
+    "categories": ["food", "social"],
+    "coordinates": { "x": 20, "y": 60 },
+    "summary": "Upper-level cantina. Same brand, different atmosphere and clientele than the main-level version.",
+    "research": "STUDENT RESEARCH GOES HERE: Compare to main-level location.",
+    "keyMetrics": [
+      { "label": "Level", "value": "Club (200)" },
+      { "label": "Restriction", "value": "21+" },
+      { "label": "Vibe", "value": "Elevated social" }
+    ]
+  },
+  {
+    "id": "pen_upper",
+    "name": "Caught Looking Lounge",
+    "location": "Above The 'Pen, club level",
+    "level": "club",
+    "categories": ["social", "premium"],
+    "coordinates": { "x": 42, "y": 24 },
+    "summary": "Elevated lounge above The 'Pen. Access for 'Pen ticket holders. Includes Coors Light Rail Bar.",
+    "research": "STUDENT RESEARCH GOES HERE",
+    "keyMetrics": [
+      { "label": "Access", "value": "'Pen ticket holders" },
+      { "label": "Features", "value": "Lounge + rail bar" }
+    ]
+  },
+  {
+    "id": "press",
+    "name": "Press Club",
+    "location": "3rd level, PL1–PL7",
+    "level": "suite",
+    "categories": ["premium"],
+    "coordinates": { "x": 56, "y": 85 },
+    "summary": "Newest premium tier. Replaced old press box. All-inclusive food/bev, full bar, oversized seating, private entrance, climate-controlled lounge.",
+    "research": "STUDENT RESEARCH GOES HERE",
+    "keyMetrics": [
+      { "label": "Status", "value": "Newest premium" },
+      { "label": "Includes", "value": "All-inclusive F&B" },
+      { "label": "View", "value": "Above Sec. 133" }
+    ]
+  },
+  {
+    "id": "allstar",
+    "name": "All-Star Club",
+    "location": "3rd level",
+    "level": "suite",
+    "categories": ["premium"],
+    "coordinates": { "x": 82, "y": 65 },
+    "summary": "Third-level premium with included buffet, cash bar, assigned plush seating, and excellent views.",
+    "research": "STUDENT RESEARCH GOES HERE",
+    "keyMetrics": [
+      { "label": "Food", "value": "Included buffet" },
+      { "label": "Bar", "value": "Cash bar" },
+      { "label": "Seating", "value": "Assigned, plush" }
+    ]
+  },
+  {
+    "id": "suites",
+    "name": "Private Suites",
+    "location": "Suite level, infield + right field",
+    "level": "suite",
+    "categories": ["premium"],
+    "coordinates": { "x": 88, "y": 52 },
+    "summary": "Private hospitality spaces with TVs, food service, skybridge entry, VIP parking. Capacity up to 52 guests.",
+    "research": "STUDENT RESEARCH GOES HERE: Corporate/group hospitality analysis.",
+    "keyMetrics": [
+      { "label": "Capacity", "value": "Up to 52 guests" },
+      { "label": "Largest", "value": "Emerald City Suite" },
+      { "label": "Service", "value": "Dedicated attendant" }
+    ]
+  },
+  {
+    "id": "view_infield",
+    "name": "View Level Infield",
+    "location": "Sections 320–340",
+    "level": "view",
+    "categories": ["social"],
+    "coordinates": { "x": 64, "y": 88 },
+    "summary": "Upper-deck infield seats. Budget-friendly with panoramic field and Seattle skyline views.",
+    "research": "STUDENT RESEARCH GOES HERE: Upper-deck fan experience, demographics.",
+    "keyMetrics": [
+      { "label": "Price", "value": "Budget-friendly" },
+      { "label": "View", "value": "Full field + skyline" },
+      { "label": "Shade", "value": "Covered by roof panel" }
+    ]
+  },
+  {
+    "id": "view_concessions",
+    "name": "View Level Concessions",
+    "location": "300 level (Sec. 309, 319, 329, 347)",
+    "level": "view",
+    "categories": ["food"],
+    "coordinates": { "x": 28, "y": 65 },
+    "summary": "300-level food including value menu, Holy Smoke BBQ (313), High Cheese Pizza (329). Different vendor mix than main level.",
+    "research": "STUDENT RESEARCH GOES HERE: Compare food options across levels.",
+    "keyMetrics": [
+      { "label": "Value menu", "value": "Available" },
+      { "label": "Notable", "value": "High Cheese Pizza (329)" },
+      { "label": "Holy Smoke", "value": "Sec. 313" }
+    ]
+  }
+]
