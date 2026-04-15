@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import MetricCard from './MetricCard'
+import ZONE_IMAGES from '../assets/zoneImages'
 
 const LEVEL_LABELS = {
   exterior: 'Exterior',
@@ -10,12 +11,12 @@ const LEVEL_LABELS = {
 }
 
 const CATEGORY_LABELS = {
-  social:     'Social',
-  food:       'Food & Drink',
-  premium:    'Premium',
-  family:     'Family',
-  history:    'History & Art',
-  innovation: 'Innovation',
+  family:        'Families with Children',
+  social:        'Young Adults & Social',
+  dedicated:     'Dedicated Fans',
+  corporate:     'Corporate & Business',
+  tourist:       'Tourists & Casual Fans',
+  accessibility: 'Accessibility & Multigenerational',
 }
 
 export default function ZonePopup({ zone, pos, onClose }) {
@@ -49,12 +50,17 @@ export default function ZonePopup({ zone, pos, onClose }) {
   if (top < MARGIN)                                top = MARGIN
   if (top + POP_H > window.innerHeight - MARGIN)  top = window.innerHeight - POP_H - MARGIN
 
+  const zoneImage = ZONE_IMAGES[zone.id]
+
   return (
     <div
       ref={ref}
       className="zone-popup"
       style={{ left, top }}
     >
+      {zoneImage && (
+        <img src={zoneImage} alt={zone.name} className="popup-image" />
+      )}
       <div className="popup-header">
         <div className="popup-name">{zone.name}</div>
         <button className="popup-close" onClick={onClose} aria-label="Close">×</button>

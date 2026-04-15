@@ -1,19 +1,19 @@
 const CATEGORY_COLORS = {
-  social:     '#378ADD',
-  food:       '#D85A30',
-  premium:    '#7F77DD',
-  family:     '#1D9E75',
-  history:    '#D4537E',
-  innovation: '#BA7517',
+  family:        '#1D9E75',
+  social:        '#378ADD',
+  dedicated:     '#D4537E',
+  corporate:     '#7F77DD',
+  tourist:       '#BA7517',
+  accessibility: '#D85A30',
 }
 
 const CATEGORY_LABELS = {
-  social:     'Social',
-  food:       'Food & Drink',
-  premium:    'Premium',
-  family:     'Family',
-  history:    'History & Art',
-  innovation: 'Innovation',
+  family:        'Families with Children',
+  social:        'Young Adults & Social',
+  dedicated:     'Dedicated Fans',
+  corporate:     'Corporate & Business',
+  tourist:       'Tourists & Casual Fans',
+  accessibility: 'Accessibility & Multigenerational',
 }
 
 export default function ZoneTooltip({ zone, pos }) {
