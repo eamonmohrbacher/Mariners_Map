@@ -23,7 +23,7 @@ export default function App() {
   const [hoveredZone, setHoveredZone]   = useState(null)
   const [hoverPos, setHoverPos]         = useState(null)
   const [activeLevel, setActiveLevel]   = useState('all')
-  const [activeCategory, setActiveCategory] = useState('all')
+  const [activeCategories, setActiveCategories] = useState([])
 
   useEffect(() => {
     function handleKey(e) {
@@ -65,8 +65,19 @@ export default function App() {
 
       <main className="app-main">
         <CategoryFilter
-          activeCategory={activeCategory}
-          onCategoryChange={(cat) => { setActiveCategory(cat); setSelectedZone(null) }}
+          activeCategories={activeCategories}
+          onCategoryChange={(cat) => {
+            setSelectedZone(null)
+            if (cat === 'all') {
+              setActiveCategories([])
+            } else {
+              setActiveCategories(prev =>
+                prev.includes(cat)
+                  ? prev.filter(c => c !== cat)
+                  : [...prev, cat]
+              )
+            }
+          }}
         />
 
         <div className="map-container">
@@ -78,7 +89,7 @@ export default function App() {
           <ParkMap
             zones={zones}
             activeLevel={activeLevel}
-            activeCategory={activeCategory}
+            activeCategories={activeCategories}
             selectedZone={selectedZone}
             onZoneClick={handleZoneClick}
             onZoneHover={handleZoneHover}

@@ -7,14 +7,17 @@ const CATEGORY_COLORS = {
   accessibility: '#D85A30',
 }
 
-export default function ZonePin({ zone, index, dimmed, selected, activeCategory, onClick, onHover, onHoverEnd }) {
+export default function ZonePin({ zone, index, dimmed, selected, activeCategories, onClick, onHover, onHoverEnd }) {
   const { coordinates, categories, id } = zone
   const r = 3.2
 
-  // When a specific group is active, show that group's solid color.
-  // When "all" is selected, show split colors for multi-group zones.
-  const showSplit = activeCategory === 'all' && categories.length > 1
-  const color1 = showSplit ? (CATEGORY_COLORS[categories[0]] || '#888') : (CATEGORY_COLORS[activeCategory] || CATEGORY_COLORS[categories[0]] || '#888')
+  // When "all" is selected (empty array), show split colors for multi-group zones.
+  // When specific categories are selected, use the first matching category's color.
+  const showSplit = activeCategories.length === 0 && categories.length > 1
+  const activeColor = activeCategories.length > 0
+    ? CATEGORY_COLORS[categories.find(c => activeCategories.includes(c))] || CATEGORY_COLORS[categories[0]] || '#888'
+    : null
+  const color1 = showSplit ? (CATEGORY_COLORS[categories[0]] || '#888') : (activeColor || CATEGORY_COLORS[categories[0]] || '#888')
   const color2 = showSplit ? (CATEGORY_COLORS[categories[1]] || '#888') : null
   const gradId = `pin-grad-${id}`
 
